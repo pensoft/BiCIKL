@@ -1,7 +1,7 @@
-# Finding the lost parents [Quentin Groom]
+# Finding the lost parents
 
 ## Partners
-* [https://www.plantentuinmeise.be/en/](Meise Botanic Garden) (MBG)
+* [https://www.plantentuinmeise.be/en/](Meise Botanic Garden) (MBG) @qgroom
 * [https://www.sib.swiss/](Swiss Institute of Bioinformatics) (SIB)
 * [https://www.gbif.org/](Global Biodiversity Information Facility) (GBIF)
 * [http://www.plazi.org/](Plazi)
