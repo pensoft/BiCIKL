@@ -1,17 +1,17 @@
 # Finding the lost parents
 
 ## Partners
-* [https://www.plantentuinmeise.be/en/](Meise Botanic Garden) (MBG) @qgroom
-* [https://www.sib.swiss/](Swiss Institute of Bioinformatics) (SIB)
-* [https://www.gbif.org/](Global Biodiversity Information Facility) (GBIF)
-* [http://www.plazi.org/](Plazi)
+* [Meise Botanic Garden](https://www.plantentuinmeise.be/en/) (MBG) @qgroom
+* [Swiss Institute of Bioinformatics](https://www.sib.swiss/) (SIB)
+* [Global Biodiversity Information Facility](https://www.gbif.org/) (GBIF)
+* [Plazi](http://www.plazi.org/)
 
 ## infrastructures to be used 
-* [https://www.gbif.org/](Global Biodiversity Information Facility) (GBIF)
-* [https://www.catalogueoflife.org/](Catalogue of Life) (CoL)
-* [http://plazi.org/resources/treatmentbank/](TreatmentBank)
-* [https://www.wikidata.org/wiki/Wikidata:Main_Page](Wikidata)
-* [https://www.ipni.org/](International Plant Names Index)
+* [Global Biodiversity Information Facility](https://www.gbif.org/) (GBIF)
+* [Catalogue of Life](https://www.catalogueoflife.org/) (CoL)
+* [TreatmentBank](http://plazi.org/resources/treatmentbank/)
+* [Wikidata](https://www.wikidata.org/wiki/Wikidata:Main_Page)
+* [International Plant Names Index](https://www.ipni.org/)
 
 ## Rationale
 One of the most important drivers of evolution is hybridization. Hybridization and introgression shuffles alleles to create new combinations that are then tested against the environment and can 
