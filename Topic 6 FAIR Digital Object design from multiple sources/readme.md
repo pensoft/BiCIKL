@@ -11,6 +11,7 @@
 ## Infrastructures to be used 
 
 ## Rationale
+
 FAIR Digital Objects (FDO) are actionable Digital Objects with persistent identifiers and properties. It provides a mechanism for abstract data constructs that can span multiple domains and data sources. It can also create abstractions for different segmentations within a data intensive workflow with identifiers and data type validation. 
 
 These and other properties make FDO an ideal candidate to explore and link different biodiversity data classes such as taxon, specimens, sequences. However, conceptual knowledge encoded in domain ontologies and vocabularies are known obstacles for data reference, linking, and merging. FDO can work as an anchor for creating an interoperable digital object in this case.  

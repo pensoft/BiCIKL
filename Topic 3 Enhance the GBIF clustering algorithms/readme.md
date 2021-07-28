@@ -17,3 +17,4 @@ Metadata about digitised specimens, sequences and material citations and observa
 - Knowledge sharing of GBIF operations; namely the big data processing environments used by GBIF and file formats (Spark, Hive, HBse, Parquet etc)
 - More linkages between objects through the GBIF APIs (material citations, specimens, sequences)
 - A more robust mechanism to monitor ongoing improvements to the GBIF clustering
+
