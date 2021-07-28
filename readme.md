@@ -17,10 +17,3 @@ All BiCIKL partners are invited to propose topics which will then be reviewed in
 1. [Topic 10 An IPFS-Blockchain Interface](Topic%2010%20An%20IPFS-Blockchain%20Interface/readme.md)
 
 
-
-
-
-
-
-
-

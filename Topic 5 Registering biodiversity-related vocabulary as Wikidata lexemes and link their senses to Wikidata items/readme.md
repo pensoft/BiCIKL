@@ -18,3 +18,4 @@ Wikidata is a FAIR and open semantic database that is community-curated followin
 
 ## Outputs
 The minimal outcome of this hackathon project would be the documentation of a workflow - for at least one BiCIKL infrastructure - that covers in detail the steps listed under “ii” in the methodology section above, ideally based on use cases (as per “i”) for which automation (as per “iii”) is within reach. In the long run, doing this systematically for one or more of the BiCIKL research infrastructures will help disambiguate ambiguous terms better and recognize biodiversity-related entities with higher precision across a growing range of linguistic and thematic contexts and document types. Such improved workflows can help improve the information in Wikidata, thereby providing the basis for a positive data quality feedback loop between content mining and Wikidata-based curation of linguistic and subject-matter contexts for such content.
+
