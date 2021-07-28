@@ -1,12 +1,14 @@
 # How good are Triple IDs in ENA?
 
 ## Partners
-- BGBM (lead)
+- BGBM (lead) @Jörg Holetschek
 - ENA
 - [Global Biodiversity Information Facility](https://www.gbif.org/) (GBIF)
 
 ## Infrastructures to be used 
-
+- ENA
+- GBIF
+  
 ## Rationale
 Large sets of records in the **European Nucleotide Archive (ENA)** reference specimens (e.g., as specimen_voucher, bio_material, or culture_collection) through the use of GBIF triple IDs. However, it is unclear whether these links correctly and reliably reference specimen records in **GBIF**. During the hackathon, we want to investigate these links in more detail and develop automated methods for their validation and correction.
 
