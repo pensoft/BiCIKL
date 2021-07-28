@@ -4,7 +4,7 @@ The BiCIKL BioHackathon will take place on September 20-24, 2021 at Meise Botani
 
 All BiCIKL partners are invited to propose topics which will then be reviewed in the week of June 28-July 2 by partners involved in Task 1.2. Please add your ideas for topics with a short description in this document by the end of this week. Please describe clearly which infrastructures would be involved and how the hackathon could contribute in making the infrastructures more interoperable. 
 
-1. [Lost Parents](https://github.com/pensoft/BiCIKL/blob/main/Topic%201%20Finding%20the%20lost%20parents/lostParents.md)
+1. [Lost Parents](https://github.com/pensoft/BiCIKL/blob/main/Topic%201%20Finding%20the%20lost%20parents/readme.md)
 2. [How good are Triple IDs in ENA?]()
 3. [Enhance the GBIF clustering algorithms]()
 4. [Assigning latin scientific names to OTUs based on sequence clusters]()
