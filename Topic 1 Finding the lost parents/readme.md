@@ -25,3 +25,9 @@ We propose to parse the parents of hybrids from literature and from taxonomic ch
 * Recomendations for matching names to the CoL, IPNI and the GBIF Taxonomic backbone.
 * Recomendations for extracting hybrid parents from literature.
 
+## Examples of publications describing hybrids and their parents
+
+Bowden, W. M. (1959). The taxonomy and nomenclature of the wheats, barleys, and ryes and their wild relatives. Canadian Journal of Botany, 37(4), 657-684. https://doi.org/10.3264/FG.2012.0710 
+Gallo, L. (2012). Natural hybrids in Sedum series Rupestria Berger (Crassulaceae): a review of taxonomy and nomenclature.
+Smith, G. F. (2020). Taxonomy and nomenclature of Kalanchoe× laetivirens (Crassulaceae subfam. Kalanchooideae), a further invasive nothospecies from Madagascar. Phytotaxa, 460(1), 97-109. https://doi.org/10.11646/phytotaxa.460.1.6
+Groom, Q., Meeus, S., Janssens, S., Leus, L. & Hoste, I. (2021) Hybridization of Oxalis corniculata and O. dillenii in their non-native range, PhytoKeys 178, pp. 17-30: 17	[*Oxalis x vanaelstii* Hoste, Meeus & Groom](http://tb.plazi.org/GgServer/html/3D6059855F755A24B6622DE1D140E5C5)
