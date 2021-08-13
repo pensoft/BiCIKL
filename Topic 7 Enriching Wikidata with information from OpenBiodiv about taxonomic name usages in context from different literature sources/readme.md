@@ -1,4 +1,4 @@
-# Enriching Wikidata with information from OpenBiodiv about taxonomic name usages in context from different literature sources
+# Enriching Wikidata with information from OpenBiodiv about type specimens in context from different literature sources
 
 ## Partners
 - Pensoft (lead) @Mariya Dimitrova
