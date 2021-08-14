@@ -1,5 +1,5 @@
 
-# Assigning latin scientific names to OTUs based on sequence clusters
+# Assigning Latin scientific names to OTUs based on sequence clusters
 
 ## Partners
 - GBIF (lead) @Thomas Jeppesen
