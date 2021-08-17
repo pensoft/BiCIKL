@@ -34,4 +34,5 @@ The minimal outcome of this hackathon project would be the documentation of a wo
 ## Interested individuals
 *Please list your name, link it to your GitHub profile and say a few words about what you'd like to do in the framework of this hackathon. Feel free to add further information, e.g. ORCID, Wikimedia user name or social media handles.*
 - [Daniel Mietchen](https://github.com/Daniel-Mietchen) ([0000-0001-9488-1870](https://orcid.org/0000-0001-9488-1870), [User:Daniel Mietchen](https://www.wikidata.org/wiki/User:Daniel_Mietchen), [@EvoMRI](https://twitter.com/EvoMRI)): I plan to focus on vocabulary related to species that are invasive, endangered, recently extinct or newly described.
+- [Finn Årup Nielsen](https://github.com/fnielsen) [Scholia](https://scholia.toolforge.org/author/Q20980928): Particular Danish lexemes.
 - you?
