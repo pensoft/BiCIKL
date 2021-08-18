@@ -3,7 +3,7 @@
 ## Partners
 - Plazi (lead) @Donat Agosti
 - SIB 
-- BFH
+- [Berner Fachhochschule (BFH)](https://www.bfh.ch/en/)
 - MBG
 - GBIF
 - BGBM - Botanischer Garten Berlin?: Especially Natural History collections that issue persistent identifiers for specimens, and in the better case, have a corpus of publications that already make use of this.
