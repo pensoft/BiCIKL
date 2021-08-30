@@ -1,9 +1,28 @@
-# Topics for the BiCIKL Hackathon 2021
+# BiCIKL BioHackathon
 
 The [BiCIKL](https://bicikl-project.eu/) BioHackathon will take place on September 20-24, 2021 at [Meise Botanic Garden](https://www.plantentuinmeise.be/). This hackathon is a five-day coding event and is held to test and identify barriers to interoperability between the infrastructures. In BiCIKL we want to link up different data types such as specimens, taxon names, literature and sequences (see diagram below). The BioHackathon will explore what the technical issues and requirements are for linking data types in the different infrastructures. 
 
 All BiCIKL partners are invited to propose topics which will then be reviewed in the week of June 28-July 2 by partners involved in Task 1.2. Please add your ideas for topics with a short description in this document by the end of this week. Please describe clearly which infrastructures would be involved and how the hackathon could contribute in making the infrastructures more interoperable. 
 
+# Organizational details
+
+[Registration](https://docs.google.com/forms/d/e/1FAIpQLSd45XVJq6TcUSIaCPiOG64-2Ogi1jqlBq6r9ywhJLSbTgEFFQ/viewform?usp=sf_link)
+
+## How to get to Meise Botanic Garden
+
+From Brussels Airport (15 km away)
+
+Meise Botanic Garden can be reached by a direct [De Lijn](https://www.delijn.be/en/) bus connection (Zaventem-Merchtem line 821). Be aware that Brussels Airport is not the same airport as Brussels South (Charleroi) airport.
+
+From Brussels-Midi train station
+
+First take the train to Brussels-North where you will then take a direct bus connection (Lines 250 or 251) to the main entrance of the Botanic Garden.
+
+## Accommodation
+
+You can choose to stay in a hotel close to the Garden such as the [Falko hotel](https://www.falkohotel.be/en/) (2 km away) or the [Hotel Ibis Brussels Expo Atomium](https://all.accor.com/hotel/2846/index.nl.shtml?utm_term=mar&gclid=CjwKCAjwx8iIBhBwEiwA2quaqwQzUfmC-ZKgd3e9SEb-tfqaXIuU_YvttUFFCczkPpvCdEKpWz3rwBoCymwQAvD_BwE&utm_campaign=ppc-ibi-mar-goo-nl-nl-be-bmm-sear-bp&utm_medium=cpc&utm_content=nl-nl-BE-V0627&utm_source=google) (4 km away). However, if you would like to stay closer to where the bars and restaurants are then you better choose a hotel located in the city center of Brussels such as [Hotel Novotel Brussels City Centre](https://all.accor.com/hotel/1030/index.en.shtml). It will take you approximately 45 minutes to get from Brussels city centre to the Garden by bus. Check the website for the bus timetable [here](https://www.delijn.be/en/). 
+
+# Topics for the BiCIKL Hackathon 2021
 
 1. [Finding the lost parents](Topic%201%20Finding%20the%20lost%20parents/readme.md)
 2. [How good are Triple IDs in ENA](Topic%202%20How%20good%20are%20Triple%20IDs%20in%20ENA/readme.md)
