@@ -4,19 +4,29 @@ The [BiCIKL](https://bicikl-project.eu/) BioHackathon will take place on Septemb
 
 All BiCIKL partners are invited to propose topics which will then be reviewed in the week of June 28-July 2 by partners involved in Task 1.2. Please add your ideas for topics with a short description in this document by the end of this week. Please describe clearly which infrastructures would be involved and how the hackathon could contribute in making the infrastructures more interoperable. 
 
+
+
+- [Organizational details](#organizational-details)
+  - [How to get to Meise Botanic Garden](#how-to-get-to-meise-botanic-garden)
+    - [From Brussels Airport (15 km away)](#from-brussels-airport-15-km-away)
+    - [From Brussels-Midi train station](#from-brussels-midi-train-station)
+  - [Accommodation](#accommodation)
+- [Topics for the BiCIKL Hackathon 2021](#topics-for-the-bicikl-hackathon-2021)
+  - [Topic Overview](#topic-overview)
+
 # Organizational details
 
-[Registration](https://docs.google.com/forms/d/e/1FAIpQLSd45XVJq6TcUSIaCPiOG64-2Ogi1jqlBq6r9ywhJLSbTgEFFQ/viewform?usp=sf_link)
+[**Registration**](https://docs.google.com/forms/d/e/1FAIpQLSd45XVJq6TcUSIaCPiOG64-2Ogi1jqlBq6r9ywhJLSbTgEFFQ/viewform?usp=sf_link)
 
 ## How to get to Meise Botanic Garden
 
-From Brussels Airport (15 km away)
+### From Brussels Airport (15 km away)
 
-Meise Botanic Garden can be reached by a direct [De Lijn](https://www.delijn.be/en/) bus connection (Zaventem-Merchtem line 821). Be aware that Brussels Airport is not the same airport as Brussels South (Charleroi) airport.
+Meise Botanic Garden can be reached by a direct [De Lijn](https://www.delijn.be/en/) bus connection ([Zaventem-Merchtem line 821    ](https://www.delijn.be/en/routeplanner/resultaten.html?from=Brussels%20Airport,%20A201,%201930%20Zaventem,%20Belgium&fromLat=50.89452&fromLng=4.47767&to=National%20Botanic%20Garden,%20Nieuwelaan,%201860%20Meise,%20Belgium&toLat=50.92941&toLng=4.33437)). Be aware that Brussels Airport is not the same airport as Brussels South (Charleroi) airport.
 
-From Brussels-Midi train station
+### From Brussels-Midi train station
 
-First take the train to Brussels-North where you will then take a direct bus connection (Lines 250 or 251) to the main entrance of the Botanic Garden.
+First take the train to [Brussels-North](https://goo.gl/maps/GK4N7Jc8sfGoD7P16) where you will then take a direct bus connection (Lines 250 or 251) [to the main entrance](https://goo.gl/maps/hnqpRJW2Db2Rxsrk7) of the Botanic Garden.
 
 ## Accommodation
 
