@@ -61,3 +61,45 @@ You can choose to stay in a hotel close to the Garden such as the [Falko hotel](
 |9|Hidden women in science|MBG [(Maarten Trekels)](mailto:maarten.trekels@plantentuinmeise.be)|Wikidata, Plazi, GBIF, CETAF, Science stories|
 |10|An IPFS-Blockchain Interface|LifeWatch ERIC [(Francisco Sanchez)](mailto:franciscom.sanchez@lifewatch.eu)|GBIF, Plazi, CETAF, Species 2000|
 
+# Agenda
+Time zone: CEST
+Monday 20/9
+Start: 12:00
+Programme (hybrid):
+- 12:00-13:00 Registration and sandwich lunch
+- 13:00-13:30 Welcome
+- 13:30-17:30 Presentations of infrastructures used in the hackathon (GBIF, ENA, SIB,
+LifeWatch, Treatmentbank, BGBM, MBG, Naturalis, COL) and team topics by team
+leaders + discussion
+- 17:30-19:00 Reception
+
+Tuesday 21/9
+Start: 9:00
+Programme:
+- 9:00-12:30 Hacking in teams
+- 12:30-13:00 Lunch
+- 13:00-16:30 Hacking in teams
+- 16:30-17:30 Teams report progress, problems,...
+
+Wednesday 22/9
+Start: 9:00
+Programme:
+- 9:00-12:30 Hacking in teams
+- 12:30-13:00 Lunch
+- 13:00-16:30 Hacking in teams
+- 16:30-17:30 Teams report progress, problems,...
+- 17:30-... Tapas & beer tasting
+
+Thursday 23/9
+Start: 9:00
+Programme:
+- 9:00-12:30 Hacking in teams
+- 12:30-13:00 Lunch
+- 13:00-17:30 Hacking in teams
+
+Friday 24/9
+Start: 9:00
+Programme (hybrid):
+- 9:00-12:30 Presentations of each team and discussion of the results
+- 12:30-13:00 Lunch
+- 13:00 End hackathon
