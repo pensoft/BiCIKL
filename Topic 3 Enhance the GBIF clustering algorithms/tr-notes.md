@@ -41,3 +41,50 @@ gbifId, datasetKey, basisOfRecord, publishingorgkey, datasetName, publisher,
   ext_multimedia;
 ```
 
+
+2. Export from HDFS on GBIF:
+
+```
+cd /mnt/auto/scratch/trobertson
+hdfs dfs -get /user/hive/warehouse/tim.db/hackathon/* .
+```
+
+3. Upload to AZ using the CLI
+
+Need to create the container (hackathon) and create a time limited sas token.
+Note: Be careful to put it in EUROPE!
+
+```
+az storage blob upload-batch -d hackathon/gbif/20210902/occurrence.avro \
+-s ./  --sas-token 'generated in the UI' --account-name biciklhackathon --max-connections 16
+```
+
+4. Create a SAS to read this
+
+In databricks we'll read this using SAS based authentication. Note that the SAS needs to be created with LIST permission or else a occurrence.avro/* can't work.
+
+5. Now create a table in Databricks from the source data
+
+```
+val containerName = "hackathon"
+val storageAccountName = "biciklhackathon"
+val sas = "..." 
+val config = "fs.azure.sas." + containerName+ "." + storageAccountName + ".blob.core.windows.net"
+
+val fileName = "wasbs://" + containerName + "@biciklhackathon.blob.core.windows.net/gbif/20210902/occurrence.avro"
+
+dbutils.fs.mount(
+  source = fileName,
+  mountPoint = "/mnt/test",
+  extraConfigs = Map(config -> sas))
+
+val sourceDF = spark.read.format("avro").load("/mnt/test3")
+display(sourceDF)
+
+sourceDF.write.format("parquet").saveAsTable("timtest")
+val readTest = spark.sql("SELECT gbifID from timtest")
+display(readTest)
+
+
+dbutils.fs.unmount("/mnt/test")
+```
