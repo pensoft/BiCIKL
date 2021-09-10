@@ -1,7 +1,7 @@
-# Personal notes from Tim Robertson
+# Notes for exporting from GBIF
 
-These are notes to self, which will be moved into documentation when ready.
-
+These instructions explain how to export views from the GBIF data warehouse onto Azure, and then into Databricks.
+As this requires access to the GBIF Hive warehouse it requires someone from the GBIF development team to run (start here trobertson@gbif.org).  
 
 1. Create the table as all GBIF minus eBird (to reduce volume) on GBIF:
 
@@ -40,8 +40,6 @@ gbifId, datasetKey, basisOfRecord, publishingorgkey, datasetName, publisher,
   recordedBy, recordedByID,
   ext_multimedia;
 ```
-
-
 2. Export from HDFS on GBIF:
 
 ```
@@ -65,26 +63,27 @@ In databricks we'll read this using SAS based authentication. Note that the SAS 
 
 5. Now create a table in Databricks from the source data
 
+The following provides the script, shown also in the notebook sitting in this folder.
+
 ```
 val containerName = "hackathon"
 val storageAccountName = "biciklhackathon"
-val sas = "..." 
+val sas = "sp=rl&st=2021-09-09T12:29:51Z&se=2021-09-09T20:29:51Z&spr=https&sv=2020-08-04&sr=c&sig=...." 
 val config = "fs.azure.sas." + containerName+ "." + storageAccountName + ".blob.core.windows.net"
 
 val fileName = "wasbs://" + containerName + "@biciklhackathon.blob.core.windows.net/gbif/20210902/occurrence.avro"
 
 dbutils.fs.mount(
   source = fileName,
-  mountPoint = "/mnt/test",
+  mountPoint = "/mnt/data1",
   extraConfigs = Map(config -> sas))
 
-val sourceDF = spark.read.format("avro").load("/mnt/test3")
+val sourceDF = spark.read.format("avro").load("/mnt/data1")
 display(sourceDF)
 
-sourceDF.write.format("parquet").saveAsTable("timtest")
-val readTest = spark.sql("SELECT gbifID from timtest")
+sourceDF.write.format("parquet").saveAsTable("gbif.occurrence")
+val readTest = spark.sql("SELECT gbifID from gbif.occurrence")
 display(readTest)
 
-
-dbutils.fs.unmount("/mnt/test")
+dbutils.fs.unmount("/mnt/data1")
 ```
