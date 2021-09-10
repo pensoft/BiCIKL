@@ -11,34 +11,23 @@ import scala.collection.JavaConversions._
 
 object Cluster {
 
-
-
-  // To aid running in Oozie, all properties are supplied as main arguments
   val usage = """
     Usage: Cluster \
       [--hive-db database] \
       [--hive-table-hashed tableName] \
       [--hive-table-candidates tableName] \
-      [--hive-table-relationships tableName] \
-      [--hbase-table tableName] \
-      [--hbase-regions numberOfRegions] \
-      [--hbase-zk zookeeperEnsemble] \
-      [--hfile-dir directoryForHFiles]
+      [--hive-table-relationships tableName]
   """
 
   def main(args: Array[String]): Unit = {
     val parsedArgs = checkArgs(args) // sanitize input
-    assert(parsedArgs.size==8, usage)
+    assert(parsedArgs.size==4, usage)
     System.err.println("Configuration: " + parsedArgs) // Oozie friendly logging use
 
     val hiveDatabase = parsedArgs.get('hiveDatabase).get
     val hiveTableHashed = parsedArgs.get('hiveTableHashed).get
     val hiveTableCandidates = parsedArgs.get('hiveTableCandidates).get
     val hiveTableRelationships = parsedArgs.get('hiveTableRelationships).get
-    val hbaseTable = parsedArgs.get('hbaseTable).get
-    val hbaseRegions = parsedArgs.get('hbaseRegions).get.toInt
-    val hbaseZK = parsedArgs.get('hbaseZK).get
-    val hfileDir = parsedArgs.get('hfileDir).get
 
     val warehouseLocation = new File("spark-warehouse").getAbsolutePath
 
@@ -178,7 +167,7 @@ object Cluster {
 
         t1.gbifId AS t1_gbifId, t1.datasetKey AS t1_datasetKey, t1.basisOfRecord AS t1_basisOfRecord, t1.publishingorgkey AS t1_publishingOrgKey, t1.datasetName AS t1_datasetName, t1.publisher AS t1_publishingOrgName,
         CAST(t1.kingdomKey AS String) AS t1_kingdomKey, CAST(t1.phylumKey AS String) AS t1_phylumKey, CAST(t1.classKey AS String) AS t1_classKey, CAST(t1.orderKey AS String) AS t1_orderKey, CAST(t1.familyKey AS String) AS t1_familyKey, CAST(t1.genusKey AS String) AS t1_genusKey, CAST(t1.speciesKey AS String) AS t1_speciesKey, CAST(t1.acceptedTaxonKey AS String) AS t1_acceptedTaxonKey, CAST(t1.taxonKey AS String) AS t1_taxonKey,
-        t1.scientificName AS t1_scientificName, t1.acceptedScientificName AS t1_acceptedScientificName, t1.kingdom AS t1_kingdom, t1.phylum AS t1_phylum, t1.order_ AS t1_order, t1.family AS t1_family, t1.genus AS t1_genus, t1.species AS t1_species, t1.genericName AS t1_genericName, t1.specificEpithet AS t1_specificEpithet, t1.taxonRank AS t1_taxonRank,
+        t1.scientificName AS t1_scientificName, t1.acceptedScientificName AS t1_acceptedScientificName, t1.kingdom AS t1_kingdom, t1.phylum AS t1_phylum, t1.order AS t1_order, t1.family AS t1_family, t1.genus AS t1_genus, t1.species AS t1_species, t1.genericName AS t1_genericName, t1.specificEpithet AS t1_specificEpithet, t1.taxonRank AS t1_taxonRank,
         t1.typeStatus AS t1_typeStatus, t1.preparations AS t1_preparations,
         t1.decimalLatitude AS t1_decimalLatitude, t1.decimalLongitude AS t1_decimalLongitude, t1.countryCode AS t1_countryCode,
         t1.year AS t1_year, t1.month AS t1_month, t1.day AS t1_day, from_unixtime(floor(t1.eventDate/1000)) AS t1_eventDate,
@@ -188,7 +177,7 @@ object Cluster {
 
         t2.gbifId AS t2_gbifId, t2.datasetKey AS t2_datasetKey, t2.basisOfRecord AS t2_basisOfRecord, t2.publishingorgkey AS t2_publishingOrgKey, t2.datasetName AS t2_datasetName, t2.publisher AS t2_publishingOrgName,
         CAST(t2.kingdomKey AS String) AS t2_kingdomKey, CAST(t2.phylumKey AS String) AS t2_phylumKey, CAST(t2.classKey AS String) AS t2_classKey, CAST(t2.orderKey AS String) AS t2_orderKey, CAST(t2.familyKey AS String) AS t2_familyKey, CAST(t2.genusKey AS String) AS t2_genusKey, CAST(t2.speciesKey AS String) AS t2_speciesKey, CAST(t2.acceptedTaxonKey AS String) AS t2_acceptedTaxonKey, CAST(t2.taxonKey AS String) AS t2_taxonKey,
-        t2.scientificName AS t2_scientificName, t2.acceptedScientificName AS t2_acceptedScientificName, t2.kingdom AS t2_kingdom, t2.phylum AS t2_phylum, t2.order_ AS t2_order, t2.family AS t2_family, t2.genus AS t2_genus, t2.species AS t2_species, t2.genericName AS t2_genericName, t2.specificEpithet AS t2_specificEpithet, t2.taxonRank AS t2_taxonRank,
+        t2.scientificName AS t2_scientificName, t2.acceptedScientificName AS t2_acceptedScientificName, t2.kingdom AS t2_kingdom, t2.phylum AS t2_phylum, t2.order AS t2_order, t2.family AS t2_family, t2.genus AS t2_genus, t2.species AS t2_species, t2.genericName AS t2_genericName, t2.specificEpithet AS t2_specificEpithet, t2.taxonRank AS t2_taxonRank,
         t2.typeStatus AS t2_typeStatus, t2.preparations AS t2_preparations,
         t2.decimalLatitude AS t2_decimalLatitude, t2.decimalLongitude AS t2_decimalLongitude, t2.countryCode AS t2_countryCode,
         t2.year AS t2_year, t2.month AS t2_month, t2.day AS t2_day, from_unixtime(floor(t2.eventDate/1000)) AS t2_eventDate,
@@ -257,7 +246,7 @@ object Cluster {
    * Sanitizes application arguments.
    */
   private def checkArgs(args: Array[String]) : Map[Symbol, String] = {
-    assert(args != null && args.length==16, usage)
+    assert(args != null && args.length==8, usage)
 
     def nextOption(map : Map[Symbol, String], list: List[String]) : Map[Symbol, String] = {
       def isSwitch(s : String) = (s(0) == '-')
@@ -271,14 +260,6 @@ object Cluster {
           nextOption(map ++ Map('hiveTableCandidates -> value), tail)
         case "--hive-table-relationships" :: value :: tail =>
           nextOption(map ++ Map('hiveTableRelationships -> value), tail)
-        case "--hbase-table" :: value :: tail =>
-          nextOption(map ++ Map('hbaseTable -> value), tail)
-        case "--hbase-regions" :: value :: tail =>
-          nextOption(map ++ Map('hbaseRegions -> value), tail)
-        case "--hbase-zk" :: value :: tail =>
-          nextOption(map ++ Map('hbaseZK -> value), tail)
-        case "--hfile-dir" :: value :: tail =>
-          nextOption(map ++ Map('hfileDir -> value), tail)
         case option :: tail => println("Unknown option "+option)
           System.exit(1)
           map

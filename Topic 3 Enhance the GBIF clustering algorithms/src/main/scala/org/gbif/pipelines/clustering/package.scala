@@ -14,7 +14,7 @@ package object clustering {
 SELECT
   gbifId, datasetKey, basisOfRecord, publishingorgkey, datasetName, publisher,
   kingdomKey, phylumKey, classKey, orderKey, familyKey, genusKey, speciesKey, acceptedTaxonKey, taxonKey,
-  scientificName, acceptedScientificName, kingdom, phylum, order_ AS order, family, genus, species, genericName, specificEpithet, taxonRank,
+  scientificName, acceptedScientificName, kingdom, phylum, order, family, genus, species, genericName, specificEpithet, taxonRank,
   typeStatus, preparations,
   decimalLatitude, decimalLongitude, countryCode,
   year, month, day, from_unixtime(floor(eventDate/1000)) AS eventDate,
