@@ -2,13 +2,6 @@ package org.gbif.pipelines.clustering
 
 import java.io.File
 
-import org.apache.hadoop.hbase.client.HTable
-import org.apache.hadoop.hbase.{HBaseConfiguration, KeyValue}
-import org.apache.hadoop.hbase.io.ImmutableBytesWritable
-import org.apache.hadoop.hbase.mapreduce.{HFileOutputFormat, HFileOutputFormat2}
-import org.apache.hadoop.hbase.util.Bytes
-import org.apache.hadoop.mapreduce.Job
-import org.apache.spark.Partitioner
 import org.apache.spark.sql.catalyst.encoders.RowEncoder
 import org.apache.spark.sql.types.{LongType, StringType, StructField, StructType}
 import org.apache.spark.sql.{Row, SparkSession}
@@ -18,19 +11,7 @@ import scala.collection.JavaConversions._
 
 object Cluster {
 
-  /**
-   * Reads the salt from the encoded key structure.
-   */
-  class SaltPartitioner(partitionCount: Int) extends Partitioner {
 
-    def getPartition(key: Any): Int = {
-      // (salt:id1:id2:type, column)
-      val k = key.asInstanceOf[(String, String)]._1
-      Integer.valueOf(k.substring(0, k.indexOf(":")))
-    }
-
-    override def numPartitions: Int = partitionCount
-  }
 
   // To aid running in Oozie, all properties are supplied as main arguments
   val usage = """
@@ -270,55 +251,6 @@ object Cluster {
     })(relationshipEncoder).toDF().dropDuplicates()
 
     relationships.write.saveAsTable(hiveTableRelationships) // for diagnostics in hive
-
-    // convert to HBase, with modulo salted keys
-    val relationshipsSorted = relationships.rdd.flatMap(r => {
-      // index based access as cannot access by schema using flatMap and rdd
-      val id1 = r.getString(0)
-      val id2 = r.getString(1)
-      val relationshipType = r.getString(2)
-      val dataset1 = r.getString(3)
-      val dataset2 = r.getString(4)
-      val occurrence1 = r.getString(5)
-      val occurrence2 = r.getString(6)
-
-      // we salt in HBase only on the id1 to enable prefix scanning using an occurrence ID
-      val salt = Math.abs(id1.hashCode) % hbaseRegions
-
-      val saltedRowKey = salt + ":" + id1 + ":" + id2
-      val cells = scala.collection.mutable.ListBuffer[((String, String), String)]()
-
-      // while only occurrence2 is needed it is not expensive to store each which aids diagnostics
-      cells.append(((saltedRowKey, "id1"),id1))
-      cells.append(((saltedRowKey, "id2"),id2))
-      cells.append(((saltedRowKey, "reasons"),relationshipType))
-      cells.append(((saltedRowKey, "dataset1"),dataset1))
-      cells.append(((saltedRowKey, "dataset2"),dataset2))
-      cells.append(((saltedRowKey, "occurrence1"),occurrence1))
-      cells.append(((saltedRowKey, "occurrence2"),occurrence2))
-
-      cells
-    }).repartitionAndSortWithinPartitions(new SaltPartitioner(hbaseRegions)).map(cell => {
-      val k = new ImmutableBytesWritable(Bytes.toBytes(cell._1._1))
-      val row = new KeyValue(Bytes.toBytes(cell._1._1), // key
-        Bytes.toBytes("o"), // column family
-        Bytes.toBytes(cell._1._2), // cell
-        Bytes.toBytes(cell._2) // cell value
-      )
-
-      (k, row)
-    })
-
-    val conf = HBaseConfiguration.create()
-    conf.set("hbase.zookeeper.quorum", hbaseZK);
-    // NOTE: job creates a copy of the conf
-    val job = new Job(conf,"Relationships") // name not actually used since we don't submit MR
-    job.setJarByClass(this.getClass)
-    val table = new HTable(conf, hbaseTable)
-    HFileOutputFormat2.configureIncrementalLoad(job, table);
-    val conf2 = job.getConfiguration // important
-
-    relationshipsSorted.saveAsNewAPIHadoopFile(hfileDir, classOf[ImmutableBytesWritable], classOf[KeyValue], classOf[HFileOutputFormat], conf2)
   }
 
   /**
