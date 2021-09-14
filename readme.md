@@ -1,6 +1,6 @@
 # BiCIKL Hackathon
 
-The [BiCIKL](https://bicikl-project.eu/) Hackathon will take place on September 20-24, 2021 at [Meise Botanic Garden](https://www.plantentuinmeise.be/). This hackathon is a five-day coding event and is held to test and identify barriers to interoperability between the infrastructures. In BiCIKL we want to link up different data types such as specimens, taxon names, literature and sequences (see diagram below). The Hackathon will explore what the technical issues and requirements are for linking data types in the different infrastructures. 
+The [BiCIKL](https://bicikl-project.eu/) Hackathon will take place on September 20-24, 2021 at [Meise Botanic Garden](https://www.plantentuinmeise.be/). This hackathon is a five-day coding event and is held to test and identify barriers to interoperability between the infrastructures. In BiCIKL we want to link up different data types such as specimens, taxon names, literature and sequences. The Hackathon will explore what the technical issues and requirements are for linking data types in the different infrastructures. 
 
 All BiCIKL partners were invited to propose topics which were then reviewed in the week of June 28-July 2 by partners involved in Task 1.2. 
 
