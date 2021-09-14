@@ -3,7 +3,7 @@
 ## Partners
 - Plazi (lead) @Donat Agosti
 - SIB 
-- BFH
+- [Berner Fachhochschule (BFH)](https://www.bfh.ch/en/)
 - MBG
 - GBIF
 - BGBM - Botanischer Garten Berlin?: Especially Natural History collections that issue persistent identifiers for specimens, and in the better case, have a corpus of publications that already make use of this.
@@ -28,3 +28,8 @@ A user interface for curation will be designed to get data curators involved to 
 - a demonstration system allowing annotating the specimen and material citations with the respective identifiers
 - A test user Interface that facilitates human interactions to curate links created by automation or create links that have not been discovered.
 
+## Possible target treatments
+
+* http://treatment.plazi.org/id/343387CE-FF99-4113-DC0F-37BBFDA70EBA
+* http://treatment.plazi.org/id/3D605985-5F75-5A24-B662-2DE1D140E5C5
+* https://doi.org/10.1111/j.1756-1051.2009.00415.x

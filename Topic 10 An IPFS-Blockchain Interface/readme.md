@@ -5,7 +5,7 @@ More info:
 https://drive.google.com/file/d/1Ou7Jph3Z_93PNzi6VBeXpptABkQAqm4R/view?usp=sharing
 
 ## Partners
-- Lifewatch ERIC (lead) @Juan Miguel González Aranda
+- Lifewatch ERIC (lead) @Juan Miguel Gonzáles Aranda
 - GBIF
 - Plazi
 - CETAF
