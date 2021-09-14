@@ -52,10 +52,10 @@ You can choose to stay in a hotel close to the Garden such as the [Falko hotel](
 |1|Finding the lost parents|MBG ([Quentin Groom)](mailto:quentin.groom@plantentuinmeise.be)|SIB, GBIF, COL, Plazi, Wikidata|
 |2|How good are Triple IDs in ENA?|BGBM [(Jörg Holetschek)](mailto:J.Holetschek@bgbm.org)|ENA, GBIF|
 |3|Enhance the GBIF clustering algorithms|GBIF [(Tim Robertson)](mailto:trobertson@gbif.org)||
-|4|Assigning latin scientific names to OTUs based on sequence clusters|GBIF [(Thomas Jeppesen)](mailto:tsjeppesene@gbif.org), [Tobias Frøslev](mailto:tobiasgf@sund.ku.dk)|UNITE/PlutoF, COL|
+|4|Assigning latin scientific names to OTUs based on sequence clusters|GBIF [(Thomas Jeppesen](mailto:tsjeppesene@gbif.org), [Tobias Frøslev)](mailto:tobiasgf@sund.ku.dk)|UNITE/PlutoF, COL|
 |5|Registering biodiversity-related vocabulary as Wikidata lexemes and link their senses to Wikidata items|Pensoft [(Daniel Mietchen)](mailto:d.mietchen@riojournal.com)|Wikidata, Plazi, COL|
 |6|FAIR Digital Object design from multiple sources|Naturalis ([Sharif Islam](mailto:sharif.islam@naturalis.nl), [Wouter Addink](mailto:wouter.addink@naturalis.nl))|TDWG, GBIF, ENA, OpenBiodiv, DiSSCo|
-|7|Enriching Wikidata with information from OpenBiodiv about taxonomic name usages in context from different literature sources|Pensoft [(Mariya Dimitrova)](mailto:m.dimitrova@pensoft.net), [Lyubomir Penev](mailto:l.penev@pensoft.net)|OpenBiodiv, Wikidata, GBIF, Plazi, Zoobank|
+|7|Enriching Wikidata with information from OpenBiodiv about taxonomic name usages in context from different literature sources|Pensoft [(Mariya Dimitrova](mailto:m.dimitrova@pensoft.net), [Lyubomir Penev)](mailto:l.penev@pensoft.net)|OpenBiodiv, Wikidata, GBIF, Plazi, Zoobank|
 |8|Linking specimen with material citation and vice versa|Plazi [(Donat Agosti)](mailto:agosti@amnh.org)|SIB, BFH, MBG, GBIF, BGBM|
 |9|Hidden women in science|MBG [(Maarten Trekels)](mailto:maarten.trekels@plantentuinmeise.be)|Wikidata, Plazi, GBIF, CETAF, Science stories|
 
