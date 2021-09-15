@@ -1,8 +1,8 @@
-# BiCIKL BioHackathon
+# BiCIKL Hackathon
 
-The [BiCIKL](https://bicikl-project.eu/) BioHackathon will take place on September 20-24, 2021 at [Meise Botanic Garden](https://www.plantentuinmeise.be/). This hackathon is a five-day coding event and is held to test and identify barriers to interoperability between the infrastructures. In BiCIKL we want to link up different data types such as specimens, taxon names, literature and sequences (see diagram below). The BioHackathon will explore what the technical issues and requirements are for linking data types in the different infrastructures. 
+The [BiCIKL](https://bicikl-project.eu/) Hackathon will take place on September 20-24, 2021 at [Meise Botanic Garden](https://www.plantentuinmeise.be/). This hackathon is a five-day coding event and is held to test and identify barriers to interoperability between the infrastructures. In BiCIKL we want to link up different data types such as specimens, taxon names, literature and sequences. The Hackathon will explore what the technical issues and requirements are for linking data types in the different infrastructures. 
 
-All BiCIKL partners are invited to propose topics which will then be reviewed in the week of June 28-July 2 by partners involved in Task 1.2. Please add your ideas for topics with a short description in this document by the end of this week. Please describe clearly which infrastructures would be involved and how the hackathon could contribute in making the infrastructures more interoperable. 
+All BiCIKL partners were invited to propose topics which were then reviewed in the week of June 28-July 2 by partners involved in Task 1.2. 
 
 
 
@@ -16,7 +16,6 @@ All BiCIKL partners are invited to propose topics which will then be reviewed in
 
 # Organizational details
 
-[**Registration**](https://docs.google.com/forms/d/e/1FAIpQLSd45XVJq6TcUSIaCPiOG64-2Ogi1jqlBq6r9ywhJLSbTgEFFQ/viewform?usp=sf_link)
 
 ## How to get to Meise Botanic Garden
 
@@ -43,7 +42,7 @@ You can choose to stay in a hotel close to the Garden such as the [Falko hotel](
 7. [Enriching Wikidata with information from OpenBiodiv about taxonomic name usages in context from different literature sources](Topic%207%20Enriching%20Wikidata%20with%20information%20from%20OpenBiodiv%20about%20taxonomic%20name%20usages%20in%20context%20from%20different%20literature%20sources/readme.md)
 8. [Linking specimen with material citation and vice versa](Topic%208%20Linking%20specimen%20with%20material%20citation%20and%20vice%20versa/readme.md)
 9. [Hidden women in science](Topic%209%20Hidden%20women%20in%20science/readme.md)
-10. [An IPFS-Blockchain Interface](Topic%2010%20An%20IPFS-Blockchain%20Interface/readme.md)
+
 
 
 ## Topic Overview
@@ -53,53 +52,97 @@ You can choose to stay in a hotel close to the Garden such as the [Falko hotel](
 |1|Finding the lost parents|MBG ([Quentin Groom)](mailto:quentin.groom@plantentuinmeise.be)|SIB, GBIF, COL, Plazi, Wikidata|
 |2|How good are Triple IDs in ENA?|BGBM [(Jörg Holetschek)](mailto:J.Holetschek@bgbm.org)|ENA, GBIF|
 |3|Enhance the GBIF clustering algorithms|GBIF [(Tim Robertson)](mailto:trobertson@gbif.org)||
-|4|Assigning latin scientific names to OTUs based on sequence clusters|GBIF [(Thomas Jeppesen)](mailto:tsjeppesene@gbif.org)|UNITE/PlutoF, COL|
+|4|Assigning latin scientific names to OTUs based on sequence clusters|GBIF [(Thomas Jeppesen](mailto:tsjeppesene@gbif.org), [Tobias Frøslev)](mailto:tobiasgf@sund.ku.dk)|UNITE/PlutoF, COL|
 |5|Registering biodiversity-related vocabulary as Wikidata lexemes and link their senses to Wikidata items|Pensoft [(Daniel Mietchen)](mailto:d.mietchen@riojournal.com)|Wikidata, Plazi, COL|
 |6|FAIR Digital Object design from multiple sources|Naturalis ([Sharif Islam](mailto:sharif.islam@naturalis.nl), [Wouter Addink](mailto:wouter.addink@naturalis.nl))|TDWG, GBIF, ENA, OpenBiodiv, DiSSCo|
-|7|Enriching Wikidata with information from OpenBiodiv about taxonomic name usages in context from different literature sources|Pensoft [(Mariya Dimitrova)](mailto:m.dimitrova@pensoft.net)|OpenBiodiv, Wikidata, GBIF, Plazi, Zoobank|
+|7|Enriching Wikidata with information from OpenBiodiv about taxonomic name usages in context from different literature sources|Pensoft [(Mariya Dimitrova](mailto:m.dimitrova@pensoft.net), [Lyubomir Penev)](mailto:l.penev@pensoft.net)|OpenBiodiv, Wikidata, GBIF, Plazi, Zoobank|
 |8|Linking specimen with material citation and vice versa|Plazi [(Donat Agosti)](mailto:agosti@amnh.org)|SIB, BFH, MBG, GBIF, BGBM|
 |9|Hidden women in science|MBG [(Maarten Trekels)](mailto:maarten.trekels@plantentuinmeise.be)|Wikidata, Plazi, GBIF, CETAF, Science stories|
-|10|An IPFS-Blockchain Interface|LifeWatch ERIC [(Francisco Sanchez)](mailto:franciscom.sanchez@lifewatch.eu)|GBIF, Plazi, CETAF, Species 2000|
+
 
 # Agenda
 Time zone: CEST
-Monday 20/9
+
+## Monday 20/9
+
 Start: 12:00
-Programme (hybrid):
+
+Programme:
 - 12:00-13:00 Registration and sandwich lunch
-- 13:00-13:30 Welcome
-- 13:30-17:30 Presentations of infrastructures used in the hackathon (GBIF, ENA, SIB,
-LifeWatch, Treatmentbank, BGBM, MBG, Naturalis, COL) and team topics by team
-leaders + discussion
+
+HYBRID MEETING
+
+- 13:00-13:45 Welcome
+- 13:45-17:45 Presentations of infrastructures used in the hackathon and project presentations:
+  - 13:45-14:00 DiSSCo 
+  - 14:00-14:15 ENA 
+  - 14:15-14:30 SIB 
+  - 14:30-14:45 LifeWatch ERIC
+  - 14:45-15:00 TreatmentBank 
+  - 15:00-15:15 UNITE/PlutoF
+  - 15:15-15:30 OpenBiodiv
+ 
+  - 15:30-15:45 Short coffee break
+ 
+  - 15:45-16:00 COL
+  - 16:00-16:15 GBIF
+  - 16:15-16:20 Project 1 
+  - 16:20-16:25 Project 2 
+  - 16:25-16:30 Project 3 
+  - 16:30-16:35 Project 4 
+  - 16:35-16:40 Project 5 
+  - 16:40-16:45 Project 6 
+  - 16:45-16:50 Project 7 
+  - 16:50-16:55 Project 8 
+  - 16:55-17:00 Project 9 
+  - 17:00-17:45 Discussion about the projects
+
+
+END HYBRID MEETING
+
 - 17:30-19:00 Reception
 
-Tuesday 21/9
+## Tuesday 21/9
+
 Start: 9:00
+
 Programme:
 - 9:00-12:30 Hacking in teams
 - 12:30-13:00 Lunch
 - 13:00-16:30 Hacking in teams
 - 16:30-17:30 Teams report progress, problems,...
 
-Wednesday 22/9
+## Wednesday 22/9
+
 Start: 9:00
+
 Programme:
-- 9:00-12:30 Hacking in teams
+- 9:00-12:30 Hacking in teams + Parallel technical team meeting (9:00-11:00 at Van Heurck Auditorium)
 - 12:30-13:00 Lunch
 - 13:00-16:30 Hacking in teams
 - 16:30-17:30 Teams report progress, problems,...
-- 17:30-... Tapas & beer tasting
+- 17:30-23:00 Tapas & beer tasting
 
-Thursday 23/9
+## Thursday 23/9
+
 Start: 9:00
+
 Programme:
 - 9:00-12:30 Hacking in teams
 - 12:30-13:00 Lunch
 - 13:00-17:30 Hacking in teams
 
-Friday 24/9
+## Friday 24/9
+
 Start: 9:00
-Programme (hybrid):
+
+Programme:
+
+HYBRID MEETING
+
 - 9:00-12:30 Presentations of each team and discussion of the results
+
+END HYBRID MEETING
+
 - 12:30-13:00 Lunch
 - 13:00 End hackathon
