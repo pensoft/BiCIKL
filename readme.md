@@ -79,7 +79,7 @@ HYBRID MEETING
   - 14:15-14:30 SIB 
   - 14:30-14:45 LifeWatch ERIC
   - 14:45-15:00 TreatmentBank 
-  - 15:00-15:15 UNITE/PlutoF
+  - 15:00-15:15 PlutoF
   - 15:15-15:30 OpenBiodiv
  
   - 15:30-15:45 Short coffee break
