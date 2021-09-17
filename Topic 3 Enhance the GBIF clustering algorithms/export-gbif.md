@@ -3,7 +3,7 @@
 These instructions explain how to export views from the GBIF data warehouse onto Azure, and then into Databricks.
 As this requires access to the GBIF Hive warehouse it requires someone from the GBIF development team to run (start here trobertson@gbif.org).  
 
-1. Create the table as all GBIF minus eBird (to reduce volume) on GBIF:
+1. Create the table as all GBIF excluding observations (to reduce volume) on GBIF cluster:
 
 ```
 SET hive.exec.compress.output=true; 
@@ -13,7 +13,7 @@ SET hive.avro.output.codec=snappy;
 SET avro.output.codec=snappy;
 SET hive.merge.mapredfiles=true;
 SET hive.merge.mapfiles=true;
-SET hive.mapreduce.job.reduces=100;
+SET mapreduce.job.reduces=100;
  
 CREATE TABLE tim.hackathon 
 STORED AS AVRO
@@ -28,7 +28,7 @@ AS SELECT
   recordedBy, recordedByID,
   ext_multimedia
 FROM prod_h.occurrence
-WHERE speciesKey IS NOT NULL AND datasetKey != '4fa7b334-ce0d-4e88-aaae-2e0c138d049e'
+WHERE speciesKey IS NOT NULL AND basisOfRecord != 'HUMAN_OBSERVATION'
 GROUP BY 
 gbifId, datasetKey, basisOfRecord, publishingorgkey, datasetName, publisher,
   kingdomKey, phylumKey, classKey, orderKey, familyKey, genusKey, speciesKey, acceptedTaxonKey, taxonKey,
@@ -36,6 +36,33 @@ gbifId, datasetKey, basisOfRecord, publishingorgkey, datasetName, publisher,
   typeStatus, preparations,
   decimalLatitude, decimalLongitude, countryCode,
   year, month, day, from_unixtime(floor(eventDate/1000)),
+  recordNumber, fieldNumber, occurrenceID, otherCatalogNumbers, institutionCode, collectionCode, catalogNumber,
+  recordedBy, recordedByID,
+  ext_multimedia;
+
+SET mapreduce.job.reduces=5;
+
+CREATE TABLE tim.hackathon_sample 
+STORED AS AVRO
+AS SELECT 
+gbifId, datasetKey, basisOfRecord, publishingorgkey, datasetName, publisher,
+  kingdomKey, phylumKey, classKey, orderKey, familyKey, genusKey, speciesKey, acceptedTaxonKey, taxonKey,
+  scientificName, acceptedScientificName, kingdom, phylum, order, family, genus, species, genericName, specificEpithet, taxonRank,
+  typeStatus, preparations,
+  decimalLatitude, decimalLongitude, countryCode,
+  year, month, day, eventDate,
+  recordNumber, fieldNumber, occurrenceID, otherCatalogNumbers, institutionCode, collectionCode, catalogNumber,
+  recordedBy, recordedByID,
+  ext_multimedia
+FROM tim.hackathon
+WHERE gbifID%100=0
+GROUP BY 
+gbifId, datasetKey, basisOfRecord, publishingorgkey, datasetName, publisher,
+  kingdomKey, phylumKey, classKey, orderKey, familyKey, genusKey, speciesKey, acceptedTaxonKey, taxonKey,
+  scientificName, acceptedScientificName, kingdom, phylum, order, family, genus, species, genericName, specificEpithet, taxonRank,
+  typeStatus, preparations,
+  decimalLatitude, decimalLongitude, countryCode,
+  year, month, day, eventDate,
   recordNumber, fieldNumber, occurrenceID, otherCatalogNumbers, institutionCode, collectionCode, catalogNumber,
   recordedBy, recordedByID,
   ext_multimedia;
