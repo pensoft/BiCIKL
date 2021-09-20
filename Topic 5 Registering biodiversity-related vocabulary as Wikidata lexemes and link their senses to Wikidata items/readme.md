@@ -28,6 +28,11 @@ Wikidata is a [FAIR](https://en.wikipedia.org/wiki/FAIR_data) and open semantic 
 1. make provisions to scale this up.
 1. OPTIONAL: Use visualizations via [Ordia](https://ordia.toolforge.org/) to assist with quality control, prioritization and data exploration.
 
+## Potential starting points
+
+* [Global assessment report on biodiversity and ecosystem services of the Intergovernmental Science-Policy Platform on Biodiversity and Ecosystem Services](https://doi.org/10.5281/zenodo.3831674)
+* [Text-to-lexemes](https://ordia.toolforge.org/text-to-lexemes)
+
 ## Outputs
 The minimal outcome of this hackathon project would be the documentation of a workflow - for at least one BiCIKL infrastructure - that covers in detail the steps listed under “2” in the methodology section above, ideally based on use cases (as per “1”) for which automation (as per “3”) is within reach. In the long run, doing this systematically for one or more of the BiCIKL research infrastructures will help disambiguate ambiguous terms better and recognize biodiversity-related entities with higher precision across a growing range of linguistic and thematic contexts and document types. Such improved workflows can help improve the information in Wikidata, thereby providing the basis for a positive data quality feedback loop between content mining and Wikidata-based curation of linguistic and subject-matter contexts for such content. For documentation of a similar event focused on climate-related lexemes, see [Climate Lexeme Week](https://www.wikidata.org/wiki/Wikidata:WikiProject_Climate_Change/Climate_lexeme_week).
 
