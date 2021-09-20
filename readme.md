@@ -42,6 +42,7 @@ You can choose to stay in a hotel close to the Garden such as the [Falko hotel](
 7. [Enriching Wikidata with information from OpenBiodiv about taxonomic name usages in context from different literature sources](Topic%207%20Enriching%20Wikidata%20with%20information%20from%20OpenBiodiv%20about%20taxonomic%20name%20usages%20in%20context%20from%20different%20literature%20sources/readme.md)
 8. [Linking specimen with material citation and vice versa](Topic%208%20Linking%20specimen%20with%20material%20citation%20and%20vice%20versa/readme.md)
 9. [Hidden women in science](Topic%209%20Hidden%20women%20in%20science/readme.md)
+10. [Lifeblock Testnet ](https://gitlab.lifewatch.dev/lfw007-lifeblockpublic/lifeblock-testnet)
 
 
 
@@ -58,6 +59,7 @@ You can choose to stay in a hotel close to the Garden such as the [Falko hotel](
 |7|Enriching Wikidata with information from OpenBiodiv about taxonomic name usages in context from different literature sources|Pensoft [(Mariya Dimitrova](mailto:m.dimitrova@pensoft.net), [Lyubomir Penev)](mailto:l.penev@pensoft.net)|OpenBiodiv, Wikidata, GBIF, Plazi, Zoobank|
 |8|Linking specimen with material citation and vice versa|Plazi [(Donat Agosti)](mailto:agosti@amnh.org)|SIB, BFH, MBG, GBIF, BGBM|
 |9|Hidden women in science|MBG [(Maarten Trekels)](mailto:maarten.trekels@plantentuinmeise.be)|Wikidata, Plazi, GBIF, CETAF, Science stories|
+|10|Lifeblock Testnet | Lifewatch ||
 
 
 # Agenda
