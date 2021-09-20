@@ -4,6 +4,14 @@
 More info:
 https://drive.google.com/file/d/1Ou7Jph3Z_93PNzi6VBeXpptABkQAqm4R/view?usp=sharing
 
+Presentation:
+https://docs.google.com/presentation/d/1Wfm3Ay4OcNT-x2FFP-SkkndZfH97R69G/edit?usp=sharing&ouid=113235885807508815522&rtpof=true&sd=true
+
+Gitlab repository:
+https://gitlab.lifewatch.dev/lfw007-lifeblockpublic/lifeblock-testnet
+
+
+
 ## Partners
 - Lifewatch ERIC (lead) @Juan Miguel Gonzáles Aranda
 - GBIF
@@ -12,6 +20,8 @@ https://drive.google.com/file/d/1Ou7Jph3Z_93PNzi6VBeXpptABkQAqm4R/view?usp=shari
 - Species 2000
 
 ## Infrastructures to be used 
+
+See https://gitlab.lifewatch.dev/lfw007-lifeblockpublic/lifeblock-testnet associated wiki
 
 ## Rationale
 
@@ -26,3 +36,15 @@ The expected outputs on our part would be:
 - Refine the LifeBlock data provenance and traceability system by better understanding the characteristics of each of the data sources.
 - Provide a tool to the community and to these databases in particular to carry out the traceability and provenance of the data used in the investigations.
 - Demonstrate the usefulness of distributed technologies for use in ecosystem data management.
+
+## How can LifeBlock help to your projects
+
+1. Visibility. Visibility and recognition of researchers (including partial and not finished papers and projects, partial results) and maintining the provenance of citations and collaborations.
+2. Anti-tampering. Any modification is trace-back to origin, and approved by authors.
+3. Backup System through IPFS. Interplanetary File System provides the capacity of recovering any state of any dataset.
+4. Tokenization of Ecosystem Services (for instance under a socioeconomic point of view).
+5. Trazability. Full provenance of data and references up to origin.
+6. History of changes performed, including author and modification.
+7. Replicability. Data, algorithms, research environments and parameters can be included into LifeBlock for each execution and experiment. Thus, replication can be made easier.
+8. Perpetual link between data, citations and publications.
+
