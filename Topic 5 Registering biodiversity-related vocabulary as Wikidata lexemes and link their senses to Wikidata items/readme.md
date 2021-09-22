@@ -31,6 +31,7 @@ Wikidata is a [FAIR](https://en.wikipedia.org/wiki/FAIR_data) and open semantic 
 ## Potential starting points
 
 * [Global assessment report on biodiversity and ecosystem services of the Intergovernmental Science-Policy Platform on Biodiversity and Ecosystem Services](https://doi.org/10.5281/zenodo.3831674)
+* [Range extension and conservation status of the rare Solanaceae shrub, Solanum conocarpum](https://doi.org/10.3897/BDJ.9.e69156)
 * [Text-to-lexemes](https://ordia.toolforge.org/text-to-lexemes)
 
 ## Outputs

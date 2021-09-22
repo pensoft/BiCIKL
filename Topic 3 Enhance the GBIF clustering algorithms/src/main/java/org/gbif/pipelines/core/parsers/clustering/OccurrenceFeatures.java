@@ -62,7 +62,8 @@ public interface OccurrenceFeatures {
       getFieldNumber(),
       getRecordNumber(),
       getCatalogNumber(),
-      getTripleIdentifier()
+      getTripleIdentifier(),
+      getScopedIdentifier())
     );
     if (otherCatalogNumbers != null) {
       identifiers = Stream.concat(identifiers, otherCatalogNumbers);
@@ -82,6 +83,16 @@ public interface OccurrenceFeatures {
     }
   }
 
+  /** @return an identifier of form ic:cn when both are present */
+  default String getScopedIdentifier() {
+    String[] codes = {getInstitutionCode(), getCatalogNumber()};
+    if (!Arrays.stream(codes).anyMatch(Objects::isNull)) {
+      return String.join(":", codes);
+    } else {
+      return null;
+    }
+  }
+  
   default Stream<String> getParsedOtherCatalogNumbers() {
     String otherCatalogNumbers = getOtherCatalogNumbers();
     if (otherCatalogNumbers != null) {
@@ -89,5 +100,5 @@ public interface OccurrenceFeatures {
     } else {
       return null;
     }
-  }
+  }  
 }

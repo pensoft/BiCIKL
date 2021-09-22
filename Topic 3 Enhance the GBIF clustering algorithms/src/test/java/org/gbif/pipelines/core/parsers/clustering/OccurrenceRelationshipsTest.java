@@ -9,6 +9,7 @@ import static org.gbif.pipelines.core.parsers.clustering.RelationshipAssertion.F
 import static org.gbif.pipelines.core.parsers.clustering.RelationshipAssertion.FeatureAssertion.SAME_SPECIMEN;
 import static org.gbif.pipelines.core.parsers.clustering.RelationshipAssertion.FeatureAssertion.WITHIN_200m;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
@@ -352,5 +353,12 @@ public class OccurrenceRelationshipsTest {
         OccurrenceRelationships.normalizeID("David S. Seigler|J.T. Miller"));
     assertEquals(
         "DSSEIGLERJTMILLER", OccurrenceRelationships.normalizeID("D. S. Seigler & J. T. Miller"));
+  }
+
+  @Test
+  public void allNull() {
+    assertTrue(OccurrenceRelationships.allNull(null, null));
+    assertTrue(OccurrenceRelationships.allNull(null));
+    assertFalse(OccurrenceRelationships.allNull(null, ""));
   }
 }
