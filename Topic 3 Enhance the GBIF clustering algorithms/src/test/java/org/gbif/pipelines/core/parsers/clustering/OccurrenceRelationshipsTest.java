@@ -288,7 +288,6 @@ public class OccurrenceRelationshipsTest {
     assertTrue(assertion.justificationContainsAll(IDENTIFIERS_OVERLAP));
   }
 
-
   // Test that otherCatalogNumbers which do not match with catalogNumbers do not trigger a justification
   @Test
   public void testNonMatchingOtherCatalogNumbers() {
