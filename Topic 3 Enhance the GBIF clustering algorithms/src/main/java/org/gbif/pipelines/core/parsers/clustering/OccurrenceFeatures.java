@@ -56,15 +56,20 @@ public interface OccurrenceFeatures {
   String getCollectionCode();
 
   default List<String> listIdentifiers() {
-    return Stream.of(
-            getOccurrenceID(),
-            getFieldNumber(),
-            getRecordNumber(),
-            getCatalogNumber(),
-            getOtherCatalogNumbers(),
-            getTripleIdentifier())
-        .filter(Objects::nonNull)
-        .collect(Collectors.toList());
+    Stream<String> otherCatalogNumbers = getParsedOtherCatalogNumbers();
+    Stream<String> identifiers = Stream.of(
+      getOccurrenceID(),
+      getFieldNumber(),
+      getRecordNumber(),
+      getCatalogNumber(),
+      getTripleIdentifier()
+    );
+    if (otherCatalogNumbers != null) {
+      identifiers = Stream.concat(identifiers, otherCatalogNumbers);
+    }
+    return identifiers
+      .filter(Objects::nonNull)
+      .collect(Collectors.toList());
   }
 
   /** @return a triplet identifier of standard form ic:cc:cn when all triplets are present */
@@ -72,6 +77,15 @@ public interface OccurrenceFeatures {
     String[] codes = {getInstitutionCode(), getCollectionCode(), getCatalogNumber()};
     if (!Arrays.stream(codes).anyMatch(Objects::isNull)) {
       return String.join(":", codes);
+    } else {
+      return null;
+    }
+  }
+
+  default Stream<String> getParsedOtherCatalogNumbers() {
+    String otherCatalogNumbers = getOtherCatalogNumbers();
+    if (otherCatalogNumbers != null) {
+      return Stream.of(otherCatalogNumbers.split("\\|"));
     } else {
       return null;
     }

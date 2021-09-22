@@ -10,6 +10,7 @@ import static org.gbif.pipelines.core.parsers.clustering.RelationshipAssertion.F
 import static org.gbif.pipelines.core.parsers.clustering.RelationshipAssertion.FeatureAssertion.WITHIN_200m;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 
@@ -227,6 +228,93 @@ public class OccurrenceRelationshipsTest {
     RelationshipAssertion<OccurrenceFeatures> assertion = OccurrenceRelationships.generate(o1, o2);
     assertNotNull(assertion);
     assertTrue(assertion.justificationContainsAll(IDENTIFIERS_OVERLAP));
+  }
+
+  // Test that a single otherCatalogNumber matches with catalogNumbers
+  @Test
+  public void testOtherCatalogNumber() {
+    OccurrenceFeatures o1 =
+        OccurrenceFeaturesPojo.builder()
+            .id("1")
+            .datasetKey("1")
+            .speciesKey("1")
+            .institutionCode("A")
+            .collectionCode("B")
+            .catalogNumber("C")
+            .build();
+
+    OccurrenceFeatures o2 =
+        OccurrenceFeaturesPojo.builder()
+            .id("2")
+            .datasetKey("2")
+            .speciesKey("1")
+            .eventDate("20210101")
+            .decimalLatitude(1.0)
+            .decimalLongitude(1.0)
+            .otherCatalogNumbers("A:B:C")
+            .build();
+
+    RelationshipAssertion<OccurrenceFeatures> assertion = OccurrenceRelationships.generate(o1, o2);
+    assertNotNull(assertion);
+    assertTrue(assertion.justificationContainsAll(IDENTIFIERS_OVERLAP));
+  }
+
+  // Test that multiple otherCatalogNumbers match with catalogNumbers
+  @Test
+  public void testMultipleOtherCatalogNumbers() {
+    OccurrenceFeatures o1 =
+        OccurrenceFeaturesPojo.builder()
+            .id("1")
+            .datasetKey("1")
+            .speciesKey("1")
+            .institutionCode("A")
+            .collectionCode("B")
+            .catalogNumber("C")
+            .build();
+
+    OccurrenceFeatures o2 =
+        OccurrenceFeaturesPojo.builder()
+            .id("2")
+            .datasetKey("2")
+            .speciesKey("1")
+            .eventDate("20210101")
+            .decimalLatitude(1.0)
+            .decimalLongitude(1.0)
+            .otherCatalogNumbers("A:B:C|Something")
+            .build();
+
+    RelationshipAssertion<OccurrenceFeatures> assertion = OccurrenceRelationships.generate(o1, o2);
+    assertNotNull(assertion);
+    assertTrue(assertion.justificationContainsAll(IDENTIFIERS_OVERLAP));
+  }
+
+
+  // Test that otherCatalogNumbers which do not match with catalogNumbers do not trigger a justification
+  @Test
+  public void testNonMatchingOtherCatalogNumbers() {
+    OccurrenceFeatures o1 =
+            OccurrenceFeaturesPojo.builder()
+                    .id("1")
+                    .datasetKey("1")
+                    .speciesKey("1")
+                    .institutionCode("A")
+                    .collectionCode("B")
+                    .catalogNumber("C")
+                    .build();
+
+    OccurrenceFeatures o2 =
+            OccurrenceFeaturesPojo.builder()
+                    .id("2")
+                    .datasetKey("2")
+                    .speciesKey("1")
+                    .eventDate("20210101")
+                    .decimalLatitude(1.0)
+                    .decimalLongitude(1.0)
+                    .otherCatalogNumbers("A:B:D|Something")
+                    .build();
+
+    RelationshipAssertion<OccurrenceFeatures> assertion = OccurrenceRelationships.generate(o1, o2);
+    assertNull(assertion);
   }
 
   @Test
