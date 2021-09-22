@@ -28,14 +28,26 @@ WHERE speciesKey IS NOT NULL
   case class SimpleOccurrence(gbifID: String, decimalLatitude: Double)
 
   /**
-   * @return A triplified version of the codes if all present, otherwise None
-   */
+    * @return A triplified version of the codes if all present, otherwise None
+    */
   def triplify(r: Row) : Option[String] = {
     val ic = Option(r.getAs[String]("institutionCode"));
     val cc = Option(r.getAs[String]("collectionCode"));
     val cn = Option(r.getAs[String]("catalogNumber"));
 
     if (!ic.isEmpty && !cc.isEmpty && !cn.isEmpty) Option(ic.get + ":" + cc.get + ":" + cn.get)
+    else None
+  }
+
+  /**
+    * @return The catalogNumber prefixed by the institutionCode if both present, otherwise None
+    */
+  def scopeCatalogNumber(r: Row) : Option[String] = {
+    // This format of catalog number used by e.g. ENA datasets
+    val ic = Option(r.getAs[String]("institutionCode"));
+    val cn = Option(r.getAs[String]("catalogNumber"));
+
+    if (!ic.isEmpty && !cn.isEmpty) Option(ic.get + ":" + cn.get)
     else None
   }
 }
