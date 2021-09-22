@@ -344,7 +344,7 @@ public class OccurrenceRelationshipsTest {
   }
 
   @Test
-  public void testNormaliseID() {
+  public void testNormalizeID() {
     assertEquals("ABC", OccurrenceRelationships.normalizeID(" A-/, B \\C"));
     // These are examples of collectors we could be able to organize in the future
     assertEquals(
