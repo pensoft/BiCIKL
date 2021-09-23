@@ -63,7 +63,7 @@ public interface OccurrenceFeatures {
       getRecordNumber(),
       getCatalogNumber(),
       getTripleIdentifier(),
-      getScopedIdentifier())
+      getScopedIdentifier()
     );
     if (otherCatalogNumbers != null) {
       identifiers = Stream.concat(identifiers, otherCatalogNumbers);
