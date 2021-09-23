@@ -67,13 +67,14 @@ object Cluster {
             Option(r.getAs[String]("fieldNumber")),
             Option(r.getAs[String]("recordNumber")),
             Option(r.getAs[String]("catalogNumber")),
-            Option(r.getAs[String]("otherCatalogNumbers")),
             triplify(r), // ic:cc:cn format
             scopeCatalogNumber(r) // ic:cn format like ENA uses
           )
+          val otherCatalogNumbers = r.getAs[String]("otherCatalogNumbers").split("|").map(Option(_))
+          val ids = idsUsed ++ otherCatalogNumbers
 
           // clean IDs
-          val filteredIds = idsUsed.filter(s => {
+          val filteredIds = ids.filter(s => {
             s match {
               case Some(s) => !omitIds.contains(s.toUpperCase())
               case _ => false
