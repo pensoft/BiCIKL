@@ -311,6 +311,32 @@ public class OccurrenceRelationshipsSparkTest extends BaseSparkTest {
     assertTrue(assertion.justificationContains(IDENTIFIERS_OVERLAP));
   }
 
+  /** Check nulls in otherCatalogNumbers */
+  @Test
+  public void testNullOtherCatalogNumbers() {
+    OccurrenceFeatures o1 =
+            new RowOccurrenceFeatures(
+                    new RowBuilder()
+                            .with("occurrenceID", "ABC")
+                            .with("basisOfRecord", "PRESERVED_SPECIMEN")
+                            .with("speciesKey", "1")
+                            .with("catalogNumber", "GHI")
+                            .buildWithSchema());
+
+    OccurrenceFeatures o2 =
+            new RowOccurrenceFeatures(
+                    new RowBuilder()
+                            .with("occurrenceID", "123")
+                            .with("basisOfRecord", "PRESERVED_SPECIMEN")
+                            .with("speciesKey", "1")
+                            .with("otherCatalogNumbers", null)
+                            .buildWithSchema());
+
+    RelationshipAssertion<OccurrenceFeatures> assertion = OccurrenceRelationships.generate(o1, o2);
+
+    assertNull(assertion);
+  }
+
   @Test
   public void testNormaliseID() {
     assertEquals("ABC", OccurrenceRelationships.normalizeID(" A-/, B \\C"));
